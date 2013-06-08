@@ -1,5 +1,6 @@
-personal Janus customizations
-============
+# personal Janus customizations
+## Setup
 
-* Clone this repo to ~/.janus
 * run setup.sh
+
+        curl https://raw.github.com/cuzelac/dot-janus/master/setup.sh | bash
