@@ -3,4 +3,4 @@
 
 * run setup.sh
 
-        curl https://raw.github.com/cuzelac/dot-janus/master/setup.sh | bash
+        curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash
