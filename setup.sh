@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -e
+set -ex
 
-# curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash
+# curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash -ex
 
 function bg_run() {
   cmd=$1
