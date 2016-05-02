@@ -7,12 +7,12 @@ set -ex
 function bg_run() {
   cmd=$1
 
-#  if [[ 1 == $DEBUG ]]
-#  then
-#    bash -c "${cmd}"
-#  else
+  if [[ 1 == $DEBUG_JANUS_SETUP ]]
+  then
+    bash -c "${cmd}"
+  else
     bash -c "${cmd} > /dev/null 2>&1 &"
-#  fi
+  fi
 }
 
 INSTALL_DIR=~/.janus
