@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set +x
+set -e
 
 # curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash
 
