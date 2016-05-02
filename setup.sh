@@ -2,17 +2,17 @@
 
 set -ex
 
-# curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash -ex
+# curl -SsL https://raw.githubusercontent.com/cuzelac/dot-janus/master/setup.sh | bash -e
 
 function bg_run() {
   cmd=$1
 
-  if [[ 1 == $DEBUG ]]
-  then
-    bash -c "${cmd}"
-  else
+#  if [[ 1 == $DEBUG ]]
+#  then
+#    bash -c "${cmd}"
+#  else
     bash -c "${cmd} > /dev/null 2>&1 &"
-  fi
+#  fi
 }
 
 INSTALL_DIR=~/.janus
