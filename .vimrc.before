@@ -1,0 +1,23 @@
+let mapleader = ","
+set tags=tags
+
+let g:autotagTagsFile = "tags"
+let g:buffergator_suppress_keymaps = 1
+let g:NERDCreateDefaultMappings = 0
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store --ignore "**/*.pyc" -g ""'
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+
+let g:airline_powerline_fonts = 1
+
+au BufRead,BufNewFile * :filetype detect
+
+call janus#disable_plugin('vim-snippets')
+call janus#disable_plugin('easymotion')
+call janus#disable_plugin('nrrwrgn')
+
+let g:CoffeeAutoTagDisabled=0     " Disables autotaging on save (Default: 0 [false])
+let g:CoffeeAutoTagFile="./tags"  " Name of the generated tag file (Default: ./tags)
+let g:CoffeeAutoTagIncludeVars=0  " Includes variables (Default: 0 [false])
+let g:CoffeeAutoTagTagRelative=1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])

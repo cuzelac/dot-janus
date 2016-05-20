@@ -1,0 +1,64 @@
+set textwidth=0
+set background=dark
+set history=1000
+set visualbell
+set mouse=v
+
+colorscheme vividchalk
+
+" disable shortcuts installed by janus
+" narrowregion interferes with nerdtree
+:unmap <leader>nr
+:unmap <leader>rt
+" toggling text wrap makes leader-t slower
+:unmap <leader>tw
+
+:nmap <silent> <leader>dd <Plug>DashSearch
+:nmap <silent> <leader>dg <Plug>DashGlobalSearch
+
+au FileType go nmap <leader>r <Plug>(go-test)<cr>
+au FileType go nmap <leader>R <Plug>(go-test-func)<cr>
+au FileType go nmap <leader>do <Plug>(go-doc)<cr>
+au FileType go nmap <leader>gg <Plug>(go-def)<cr>
+au FileType go nested :TagbarOpen
+au FileType go nested :TagbarSetFoldlevel 0
+
+" Tagbar
+:nmap <leader>t :TagbarToggle<cr>
+let g:tagbar_compact = 1
+let g:tagbar_indent = 2
+let g:tagbar_iconchars = ['▸', '▾']
+let g:tagbar_map_nexttag = '<c-j>'
+let g:tagbar_map_prevtag = '<c-k>'
+let g:tagbar_map_openallfolds = 'O'
+let g:tagbar_map_closefold = 'x'
+let g:tagbar_map_closeallfolds = 'X'
+let g:tagbar_map_zoomwin = 'z'
+"let g:tagbar_expand = 2 "cool but lame with auto-open
+
+nnoremap <leader>o :exec '!open $(git-stash-url ' . expand('%:p') . ' ' . line(".") . ')' <cr><cr>
+
+:nmap <leader>vn :setlocal number!<cr>
+:nmap <leader>vw :setlocal wrap!<cr>
+:nmap <leader>vp :setlocal paste!<cr>
+:nmap <leader>vfr :setlocal ft=ruby<cr>
+:nmap <leader>vma :set mouse=a<cr>
+:nmap <leader>vmv :set mouse=v<cr>
+
+" NERDCommenter config
+" kill the stupid Janus <leader>cd crap
+:unmap <leader>cd
+:nmap <leader>c :call NERDComment('n','Toggle')<cr>
+:vmap <leader>c :call NERDComment('v','Toggle')<cr>
+
+:nmap <leader>b :BuffergatorToggle<CR>
+:nmap <leader>B :BuffergatorTabsOpen<CR>
+
+" Tab Setup
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
+nnoremap tn :TabooOpen<Space>
+nnoremap tr :TabooRename<Space>
+nnoremap tt :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap tq :tabclose<CR>
