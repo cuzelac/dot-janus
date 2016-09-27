@@ -23,6 +23,7 @@ pushd $INSTALL_DIR
 
 bg_run "git clone https://github.com/fatih/vim-go.git"
 bg_run "git clone https://github.com/cuzelac/AutoTag.git"
+bg_run "git clone https://github.com/cuzelac/vim-rubocop.git"
 bg_run "git clone https://github.com/tpope/vim-vividchalk.git"
 bg_run "git clone https://github.com/rizzatti/funcoo.vim.git"
 bg_run "git clone https://github.com/rizzatti/dash.vim.git"
