@@ -17,7 +17,7 @@ function bg_run() {
 
 INSTALL_DIR=~/.janus
 
-git clone git@github.com:cuzelac/dot-janus.git $INSTALL_DIR
+git clone https://github.com/cuzelac/dot-janus.git $INSTALL_DIR
 
 pushd $INSTALL_DIR
 
