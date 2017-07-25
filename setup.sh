@@ -35,6 +35,6 @@ bg_run "git clone https://github.com/bling/vim-airline.git"
 
 bg_run "gem install CoffeeTags --no-rdoc --no-ri"
 
-popd $INSTALL_DIR
+popd
 
 wait
