@@ -17,7 +17,7 @@ function bg_run() {
 
 INSTALL_DIR=~/.janus
 
-git clone git@github.com:cuzelac/dot-janus.git $INSTALL_DIR
+git clone https://github.com/cuzelac/dot-janus.git $INSTALL_DIR
 
 pushd $INSTALL_DIR
 
@@ -36,6 +36,6 @@ bg_run "git clone https://github.com/vim-ruby/vim-ruby.git"
 
 bg_run "gem install CoffeeTags --no-rdoc --no-ri"
 
-popd $INSTALL_DIR
+popd
 
 wait
