@@ -33,6 +33,7 @@ bg_run "git clone https://github.com/lukaszkorecki/CoffeeTags.git"
 bg_run "git clone https://github.com/kchmck/vim-coffee-script.git"
 bg_run "git clone https://github.com/bling/vim-airline.git"
 bg_run "git clone https://github.com/vim-ruby/vim-ruby.git"
+bg_run "git clone https://github.com/hashivim/vim-terraform.git"
 
 bg_run "gem install CoffeeTags --no-rdoc --no-ri"
 
